@@ -1,6 +1,6 @@
-close all; clear all; clc;
+% close all; clear all; clc;
 path_data = 'C:\Chuan\3DRepetitionBenchmark2015\data\IQmulus_TerraMobilita\';
-name_method = 'rigid';
+name_method = 'deform';
 
 resolution_pressure = 20;
 list_pressure = 0.025 * [0:resolution_pressure] * 1000; 
@@ -71,7 +71,7 @@ end
 h1 = figure;
 set(h1, 'Color',[255, 255, 255]/255, 'name', 'fscore rigid, method rigid');
 axis equal;
-axis([0 0.7 0 0.7]);
+axis([0 0.8 0 0.8]);
 xlabel('Overlapping');
 ylabel('fscore');
 grid on;
@@ -83,7 +83,7 @@ plot(list_pressure/1000, average_fscore_rigid, 'r-', 'LineWidth', 4);
 h2 = figure;
 set(h2, 'Color',[255, 255, 255]/255, 'name', 'fscore semantic, method rigid');
 axis equal;
-axis([0 0.7 0 0.7]);
+axis([0 0.8 0 0.8]);
 xlabel('Overlapping');
 ylabel('fscore');
 grid on;
